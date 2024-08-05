@@ -7,7 +7,9 @@ export const TicketsWithButtons = () => {
     return (
         <div className={s.ticketWithButtonsWrap}>
             <Buttons />
-            <Tickets />
+            <div>
+                <Tickets />
+            </div>
             <Button title="ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ!" />
         </div>
     )

@@ -1,7 +1,7 @@
 import s from './Ticket.module.scss'
 import s7logo from '../../../../assets/images/S7-logo.png'
 
-type TicketProps = {
+export type TicketProps = {
     price: string
     startFlightPlace: string
     flightTime: string
