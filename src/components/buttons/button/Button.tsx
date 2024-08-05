@@ -1,7 +1,12 @@
+import { ButtonHTMLAttributes } from 'react'
 import s from './Button.module.scss'
 
-export const Button = () => {
+type ButtonProps = {
+    title: string
+} & ButtonHTMLAttributes<HTMLButtonElement>
+
+export const Button = (props: ButtonProps) => {
     return (
-        <button className={s.button}>button</button>
+        <button className={s.button}>{props.title}</button>
     )
 }

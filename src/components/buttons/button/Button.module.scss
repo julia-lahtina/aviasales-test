@@ -1,5 +1,24 @@
 @import "src/globalStyle/variables";
 
 .button {
-  color: $background-color-button;
+  padding: 15px;
+  background-color: #fff;
+  color: rgb(74, 74, 74);
+  border: 1px solid rgb(223, 229, 236);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $background-color-button;
+    color: #fff;
+  }
+
+  &:first-child {
+    border-radius: 7px 0 0 7px;
+  }
+
+  &:last-child {
+    border-radius: 0 7px 7px 0;
+  }
 }
