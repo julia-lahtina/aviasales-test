@@ -1,10 +1,14 @@
+import { Container } from "./components/container/Container"
 import { TicketsPage } from "./components/TicketsPage"
 
 
 function App() {
 
   return (
-    <TicketsPage />
+    <Container>
+      <TicketsPage />
+    </Container>
+
   )
 }
 
