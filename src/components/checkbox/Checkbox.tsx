@@ -1,15 +1,21 @@
 import { InputHTMLAttributes } from 'react'
 import s from './Checkbox.module.scss'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../app/store'
+import { setCheckedStatus, sort } from '../../features/ticketsSlice'
+
 
 type CheckboxProps = {
-    title: string
+    title: sort
 } & InputHTMLAttributes<HTMLInputElement>
 
 export const Checkbox = (props: CheckboxProps) => {
+    const tickets = useSelector((state: RootState) => state.tickets)
+    const dispatch = useDispatch()
 
     return (
         <div>
-            <input onChange={() => alert('it works')} type="checkbox" />
+            <input checked={props.title === tickets.sortType} onChange={() => dispatch(setCheckedStatus(props.title))} type="checkbox" />
             <span className={s.title}>{props.title}</span>
         </div>
     )

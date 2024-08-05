@@ -6,7 +6,7 @@ type TicketProps = {
     startFlightPlace: string
     flightTime: string
     flightDuration: string
-    quantityOfTransfers: string
+    quantityOfTransfers: number
     transferPlace: string
 }
 
@@ -31,7 +31,7 @@ export const Ticket = (props: TicketProps) => {
                 </div>
 
                 <div>
-                    <div>{props.quantityOfTransfers}</div>
+                    <div>{props.quantityOfTransfers} пересадки</div>
                     <div>{props.transferPlace}</div>
                 </div>
             </div>

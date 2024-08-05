@@ -7,7 +7,7 @@ const flights = [
         startFlightPlace: 'MOW - HKT',
         flightTime: '10:45 - 08:00',
         flightDuration: '21ч 15м',
-        quantityOfTransfers: '2 пересадки',
+        quantityOfTransfers: 2,
         transferPlace: 'HKG, JNB'
     },
     {
@@ -16,7 +16,7 @@ const flights = [
         startFlightPlace: 'MOW - HKT',
         flightTime: '10:45 - 08:00',
         flightDuration: '19ч 15м',
-        quantityOfTransfers: '1 пересадки',
+        quantityOfTransfers: 1,
         transferPlace: 'HKG, JNB'
     },
     {
@@ -25,7 +25,7 @@ const flights = [
         startFlightPlace: 'MOW - HKT',
         flightTime: '10:45 - 08:00',
         flightDuration: '15ч 15м',
-        quantityOfTransfers: '0 пересадки',
+        quantityOfTransfers: 0,
         transferPlace: 'HKG, JNB'
     },
     {
@@ -34,7 +34,7 @@ const flights = [
         startFlightPlace: 'MOW - HKT',
         flightTime: '10:45 - 08:00',
         flightDuration: '23ч 15м',
-        quantityOfTransfers: '2 пересадки',
+        quantityOfTransfers: 2,
         transferPlace: 'HKG, JNB'
     },
     {
@@ -43,7 +43,7 @@ const flights = [
         startFlightPlace: 'MOW - HKT',
         flightTime: '10:45 - 08:00',
         flightDuration: '22ч 15м',
-        quantityOfTransfers: '3 пересадки',
+        quantityOfTransfers: 3,
         transferPlace: 'HKG, JNB'
     },
 
