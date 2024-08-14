@@ -1,0 +1,112 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "price": 13400,
+      "departureTime": "10:45 - 08:00",
+      "departureAirport": "MOW - HKT",
+      "arrivalTime": "11:20 - 00:50",
+      "arrivalAirport": "MOW - HKT",
+      "outboundFlightDuration": "21h 15m",
+      "returnFlightDuration": "13h 30m",
+      "transitionPlace": "HKG, JNB",
+      "transitions": 2
+    },
+    {
+      "id": 2,
+      "price": 15000,
+      "departureTime": "10:45 - 08:00",
+      "departureAirport": "MOW - HKT",
+      "arrivalTime": "11:20 - 00:50",
+      "arrivalAirport": "MOW - HKT",
+      "outboundFlightDuration": "21h 15m",
+      "returnFlightDuration": "13h 30m",
+      "transitionPlace": "HKG, JNB",
+      "transitions": 1
+    },
+    {
+      "id": 3,
+      "price": 13200,
+      "departureTime": "10:45 - 08:00",
+      "departureAirport": "MOW - HKT",
+      "arrivalTime": "11:20 - 00:50",
+      "arrivalAirport": "MOW - HKT",
+      "outboundFlightDuration": "21h 15m",
+      "returnFlightDuration": "13h 30m",
+      "transitionPlace": "HKG, JNB",
+      "transitions": 2
+    },
+    {
+      "id": 4,
+      "price": 16100,
+      "departureTime": "10:45 - 08:00",
+      "departureAirport": "MOW - HKT",
+      "arrivalTime": "11:20 - 00:50",
+      "arrivalAirport": "MOW - HKT",
+      "outboundFlightDuration": "21h 15m",
+      "returnFlightDuration": "13h 30m",
+      "transitionPlace": "HKG, JNB",
+      "transitions": 0
+    },
+    {
+      "id": 5,
+      "price": 13400,
+      "departureTime": "10:45 - 08:00",
+      "departureAirport": "MOW - HKT",
+      "arrivalTime": "11:20 - 00:50",
+      "arrivalAirport": "MOW - HKT",
+      "outboundFlightDuration": "21h 15m",
+      "returnFlightDuration": "13h 30m",
+      "transitionPlace": "HKG, JNB",
+      "transitions": 2
+    },
+    {
+      "id": 6,
+      "price": 14000,
+      "departureTime": "10:45 - 08:00",
+      "departureAirport": "MOW - HKT",
+      "arrivalTime": "11:20 - 00:50",
+      "arrivalAirport": "MOW - HKT",
+      "outboundFlightDuration": "21h 15m",
+      "returnFlightDuration": "13h 30m",
+      "transitionPlace": "HKG, JNB",
+      "transitions": 1
+    },
+    {
+      "id": 7,
+      "price": 16000,
+      "departureTime": "10:45 - 08:00",
+      "departureAirport": "MOW - HKT",
+      "arrivalTime": "11:20 - 00:50",
+      "arrivalAirport": "MOW - HKT",
+      "outboundFlightDuration": "21h 15m",
+      "returnFlightDuration": "13h 30m",
+      "transitionPlace": "HKG, JNB",
+      "transitions": 1
+    },
+    {
+      "id": 8,
+      "price": 10500,
+      "departureTime": "10:45 - 08:00",
+      "departureAirport": "MOW - HKT",
+      "arrivalTime": "11:20 - 00:50",
+      "arrivalAirport": "MOW - HKT",
+      "outboundFlightDuration": "21h 15m",
+      "returnFlightDuration": "13h 30m",
+      "transitionPlace": "HKG, JNB",
+      "transitions": 3
+    },
+    {
+      "id": 9,
+      "price": 10300,
+      "departureTime": "10:45 - 08:00",
+      "departureAirport": "MOW - HKT",
+      "arrivalTime": "11:20 - 00:50",
+      "arrivalAirport": "MOW - HKT",
+      "outboundFlightDuration": "21h 15m",
+      "returnFlightDuration": "13h 30m",
+      "transitionPlace": "HKG, JNB",
+      "transitions": 3
+    }
+  ]
+}

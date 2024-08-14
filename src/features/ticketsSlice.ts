@@ -1,41 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { TicketProps } from '../components/ticketsDashboard/tickets/ticket/Ticket'
+import { Tickets } from '../types/types'
 
-export type sort = "" | "Все" | "Без пересадок" | "1 пересадка" | "2 пересадки" | "3 пересадки"
 
-type TicketsState = {
-  isChecked: boolean
-  sortType: sort
-  ticket: Array<any>
+const initialState: Tickets = {
+ tickets: []
 }
-
-const initialState: TicketsState = {
-    isChecked: false,
-    sortType: '',
-    ticket: [
-      {price: '0 P'},
-      {startFlightPlace: ''},
-      {flightTime: ''},
-      {flightDuration: ''},
-      {quantityOfTransfers: 0},
-      {transferPlace: ''}
-    ]
-  }
-
 
 export const ticketsSlice = createSlice({
   name: 'tickets',
   initialState,
   reducers: {
-    setCheckedStatus: (state, action: PayloadAction<sort>) => {
-      state.sortType = action.payload
-    },
+    filterTickets: (state, action: PayloadAction<number>) => {
+      const newTickets = state.tickets.filter(ticket => ticket.id !== action.payload)
+      state.tickets = newTickets
     }
-  },
-)
+  }
+})
 
 
-export const { setCheckedStatus } = ticketsSlice.actions
+// Action creators are generated for each case reducer function
+export const {  } = ticketsSlice.actions
 
 export default ticketsSlice.reducer
