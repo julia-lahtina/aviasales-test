@@ -10,7 +10,7 @@ export const TicketsWithButtons = () => {
             <div>
                 <Tickets />
             </div>
-            <Button title="ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ!" />
+            <Button title="ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ!" onClick={() => alert('tickets')} />
         </div>
     )
 }

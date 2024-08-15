@@ -1,67 +1,36 @@
-import { Ticket } from "./ticket/Ticket"
+import { TicketI } from "./ticket/Ticket"
+import { useTypedSelector } from "../../../hooks/useTypedSelector"
+import { useGetTicketsQuery } from "../../../services/api"
+import { useDispatch } from "react-redux"
+import { setTickets } from "../../../features/ticketsSlice"
 
-const flights = [
-    {
-        id: 1,
-        price: '13 400 P',
-        startFlightPlace: 'MOW - HKT',
-        flightTime: '10:45 - 08:00',
-        flightDuration: '21ч 15м',
-        quantityOfTransfers: 2,
-        transferPlace: 'HKG, JNB'
-    },
-    {
-        id: 2,
-        price: '14 600 P',
-        startFlightPlace: 'MOW - HKT',
-        flightTime: '10:45 - 08:00',
-        flightDuration: '19ч 15м',
-        quantityOfTransfers: 1,
-        transferPlace: 'HKG, JNB'
-    },
-    {
-        id: 3,
-        price: '15 400 P',
-        startFlightPlace: 'MOW - HKT',
-        flightTime: '10:45 - 08:00',
-        flightDuration: '15ч 15м',
-        quantityOfTransfers: 0,
-        transferPlace: 'HKG, JNB'
-    },
-    {
-        id: 4,
-        price: '10 400 P',
-        startFlightPlace: 'MOW - HKT',
-        flightTime: '10:45 - 08:00',
-        flightDuration: '23ч 15м',
-        quantityOfTransfers: 2,
-        transferPlace: 'HKG, JNB'
-    },
-    {
-        id: 5,
-        price: '10 400 P',
-        startFlightPlace: 'MOW - HKT',
-        flightTime: '10:45 - 08:00',
-        flightDuration: '22ч 15м',
-        quantityOfTransfers: 3,
-        transferPlace: 'HKG, JNB'
-    },
-
-]
 
 export const Tickets = () => {
+
+    const { isLoading, data } = useGetTicketsQuery()
+    console.log(data)
+
+    const tickets = useTypedSelector(state => state.tickets)
+    console.log(tickets)
+
+
+
     return (
         <div>
-            {flights.map(f => {
+            {data?.map(ticket => {
                 return (
-                    <Ticket
-                        flightDuration={f.flightDuration}
-                        flightTime={f.flightTime}
-                        price={f.price}
-                        quantityOfTransfers={f.quantityOfTransfers}
-                        startFlightPlace={f.startFlightPlace}
-                        transferPlace={f.transferPlace}
-                        key={f.id}
+                    <TicketI
+                        outboundFlightDuration={ticket.outboundFlightDuration}
+                        departureTime={ticket.departureTime}
+                        price={ticket.price}
+                        transitions={ticket.transitions}
+                        departureAirport={ticket.departureAirport}
+                        transitionPlace={ticket.transitionPlace}
+                        key={ticket.id}
+                        arrivalAirport={ticket.arrivalAirport}
+                        arrivalTime={ticket.arrivalTime}
+                        returnFlightDuration={ticket.returnFlightDuration}
+                        id={ticket.id}
                     />
                 )
             })}

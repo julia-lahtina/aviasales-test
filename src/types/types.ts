@@ -1,6 +1,6 @@
 export type Ticket = {
-    id: null | number
-    price: null | number
+    id: number
+    price: number
     departureTime: string
     departureAirport: string
     arrivalTime: string
@@ -8,9 +8,8 @@ export type Ticket = {
     outboundFlightDuration: string
     returnFlightDuration: string
     transitionPlace: string
-    transitions: null | number
+    transitions: number
   }
 
-  export type Tickets = {
-    tickets: Ticket[]
-  }
+  export type Tickets = Ticket[]
+  

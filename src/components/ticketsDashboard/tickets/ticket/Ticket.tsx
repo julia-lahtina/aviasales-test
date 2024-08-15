@@ -1,16 +1,9 @@
 import s from './Ticket.module.scss'
 import s7logo from '../../../../assets/images/S7-logo.png'
+import { Ticket } from '../../../../types/types'
 
-export type TicketProps = {
-    price: string
-    startFlightPlace: string
-    flightTime: string
-    flightDuration: string
-    quantityOfTransfers: number
-    transferPlace: string
-}
 
-export const Ticket = (props: TicketProps) => {
+export const TicketI = (props: Ticket) => {
     return (
         <div className={s.ticketWrapper}>
 
@@ -21,18 +14,18 @@ export const Ticket = (props: TicketProps) => {
 
             <div className={s.flightDetailsWrapper}>
                 <div>
-                    <div>{props.startFlightPlace}</div>
-                    <div>{props.flightTime}</div>
+                    <div>{props.departureAirport}</div>
+                    <div>{props.departureTime}</div>
                 </div>
 
                 <div>
                     <div>в пути</div>
-                    <div>{props.flightDuration}</div>
+                    <div>{props.outboundFlightDuration}</div>
                 </div>
 
                 <div>
-                    <div>{props.quantityOfTransfers} пересадки</div>
-                    <div>{props.transferPlace}</div>
+                    <div>{props.transitions} пересадки</div>
+                    <div>{props.transitionPlace}</div>
                 </div>
             </div>
         </div>
