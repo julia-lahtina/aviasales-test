@@ -3,36 +3,29 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { Ticket } from '../types/types'
 
 
-const initialState: Ticket[] = [
-   {
-     id: 0,
-     price: 0,
-     departureTime: '',
-     departureAirport: '',
-     arrivalTime: '',
-     arrivalAirport: '',
-     outboundFlightDuration: '',
-     returnFlightDuration: '',
-     transitionPlace: '',
-     transitions: 0
-   }
-]
+export type TicketsState = {
+  tickets: Ticket[]
+}
+
+const initialState: TicketsState = {
+  tickets: []
+};
 
 export const ticketsSlice = createSlice({
   name: 'tickets',
   initialState,
   reducers: {
     setTickets: (state, action: PayloadAction<Ticket[]>) => {
-      state = action.payload
+      state.tickets = action.payload
     },
-    filterTickets: (state: Ticket[], action: PayloadAction<number>) => {
+/*     filterTickets: (state, action: PayloadAction<number>) => {
       const index = state.findIndex(ticket => ticket.id === action.payload);
       if (index !== -1) {
         state.splice(index, 1);
       }
-    },
-    sortTickets: (state: Ticket[], action: PayloadAction<'asc' | 'desc'>) => {
-     state.sort((a, b) => {
+    }, */
+    sortTickets: (state, action: PayloadAction<'asc' | 'desc'>) => {
+     state.tickets.sort((a, b) => {
         if(action.payload === 'asc') {
           return a.price - b.price
         } else {
@@ -44,5 +37,5 @@ export const ticketsSlice = createSlice({
 })
 
 
-export const { filterTickets, sortTickets, setTickets } = ticketsSlice.actions
+export const { sortTickets, setTickets } = ticketsSlice.actions
 export const ticketsReducer = ticketsSlice.reducer

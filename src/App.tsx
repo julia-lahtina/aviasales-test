@@ -1,16 +1,23 @@
-import { useDispatch } from "react-redux";
 import { Container } from "./components/container/Container"
 import { TicketsPage } from "./components/TicketsPage"
-import { useGetTicketsQuery } from "./services/api"
-import { setTickets } from "./features/ticketsSlice";
+import { useGetTicketsQuery } from "./services/api";
+
 
 
 function App() {
 
+  const { isLoading } = useGetTicketsQuery()
+
   return (
-    <Container>
-      <TicketsPage />
-    </Container>
+    <>
+
+      {isLoading && <div style={{ fontSize: '30px', display: 'flex', justifyContent: 'center', marginTop: '100px' }}>Loading...</div>}
+
+      <Container>
+        <TicketsPage />
+      </Container>
+    </>
+
 
   )
 }

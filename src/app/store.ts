@@ -4,8 +4,8 @@ import { setupListeners } from '@reduxjs/toolkit/query'
 import { ticketsReducer } from '../features/ticketsSlice'
 
 const reducers = combineReducers({
-  [api.reducerPath]: api.reducer,
-  tickets: ticketsReducer
+  tickets: ticketsReducer,
+  [api.reducerPath]: api.reducer
 })
 
 export const store = configureStore({

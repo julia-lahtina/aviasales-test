@@ -10,6 +10,4 @@ export type Ticket = {
     transitionPlace: string
     transitions: number
   }
-
-  export type Tickets = Ticket[]
   

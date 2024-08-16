@@ -8,7 +8,7 @@ export const TicketI = (props: Ticket) => {
         <div className={s.ticketWrapper}>
 
             <div className={s.priceLogoWrapper}>
-                <span className={s.price}>{props.price}</span>
+                <span className={s.price}>{props.price} P</span>
                 <img className={s.s7logo} src={s7logo} alt="" />
             </div>
 

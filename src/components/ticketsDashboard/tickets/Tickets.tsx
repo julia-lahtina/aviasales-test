@@ -1,23 +1,19 @@
 import { TicketI } from "./ticket/Ticket"
-import { useTypedSelector } from "../../../hooks/useTypedSelector"
 import { useGetTicketsQuery } from "../../../services/api"
-import { useDispatch } from "react-redux"
-import { setTickets } from "../../../features/ticketsSlice"
+import { useTypedSelector } from "../../../hooks/useTypedSelector"
 
 
 export const Tickets = () => {
 
     const { isLoading, data } = useGetTicketsQuery()
-    console.log(data)
+    console.log('data: ', data)
 
-    const tickets = useTypedSelector(state => state.tickets)
-    console.log(tickets)
-
-
+    const tickets = useTypedSelector(state => state.tickets.tickets)
+    console.log('tickets', tickets)
 
     return (
         <div>
-            {data?.map(ticket => {
+            {tickets?.map(ticket => {
                 return (
                     <TicketI
                         outboundFlightDuration={ticket.outboundFlightDuration}
