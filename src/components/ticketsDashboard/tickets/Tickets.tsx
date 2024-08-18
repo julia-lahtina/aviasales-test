@@ -1,12 +1,8 @@
 import { TicketI } from "./ticket/Ticket"
-import { useGetTicketsQuery } from "../../../services/api"
 import { useTypedSelector } from "../../../hooks/useTypedSelector"
 
 
 export const Tickets = () => {
-
-    const { isLoading, data } = useGetTicketsQuery()
-    console.log('data: ', data)
 
     const tickets = useTypedSelector(state => state.tickets.tickets)
     console.log('tickets', tickets)

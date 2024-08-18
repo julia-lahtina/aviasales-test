@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { sortTickets } from "../../features/ticketsSlice"
+import { sortTickets } from "../../store/ticketsSlice"
 import { Button } from "./button/Button"
 import s from './Buttons.module.scss'
 

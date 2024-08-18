@@ -1,5 +1,5 @@
 
-import { sortTickets, ticketsSlice } from '../features/ticketsSlice';
+import { sortTickets, ticketsSlice } from '../store/ticketsSlice';
 
 
 describe('ticketsSlice', () => {

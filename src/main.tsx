@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { store } from './app/store.ts'
+import { store } from './store/store.ts'
 import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { ErrorPage } from './components/errorPage/ErrorPage.tsx'
-import { MainPage } from './components/mainPage/MainPage.tsx'
+import { ErrorPage } from './components/pages/errorPage/ErrorPage.tsx'
+import { MainPage } from './components/pages/mainPage/MainPage.tsx'
 
 
 const router = createBrowserRouter([

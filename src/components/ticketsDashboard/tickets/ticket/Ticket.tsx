@@ -4,6 +4,7 @@ import { Ticket } from '../../../../types/types'
 
 
 export const TicketI = (props: Ticket) => {
+
     return (
         <div className={s.ticketWrapper}>
 

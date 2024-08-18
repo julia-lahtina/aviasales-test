@@ -18,12 +18,13 @@ export const ticketsSlice = createSlice({
     setTickets: (state, action: PayloadAction<Ticket[]>) => {
       state.tickets = action.payload
     },
-/*     filterTickets: (state, action: PayloadAction<number>) => {
-      const index = state.findIndex(ticket => ticket.id === action.payload);
-      if (index !== -1) {
-        state.splice(index, 1);
+    filterTickets: (state, action: PayloadAction<number | 'all'>) => {
+      if(action.payload === 'all') {
+        state.tickets = [...state.tickets]
+      } else {
+        state.tickets = state.tickets.filter(ticket => ticket.transitions === action.payload)
       }
-    }, */
+    },
     sortTickets: (state, action: PayloadAction<'asc' | 'desc'>) => {
      state.tickets.sort((a, b) => {
         if(action.payload === 'asc') {
@@ -37,5 +38,5 @@ export const ticketsSlice = createSlice({
 })
 
 
-export const { sortTickets, setTickets } = ticketsSlice.actions
+export const { sortTickets, setTickets, filterTickets } = ticketsSlice.actions
 export const ticketsReducer = ticketsSlice.reducer

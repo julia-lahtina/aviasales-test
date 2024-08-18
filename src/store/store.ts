@@ -1,7 +1,7 @@
 import { combineReducers, configureStore,  } from '@reduxjs/toolkit'
 import { api } from '../services/api'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { ticketsReducer } from '../features/ticketsSlice'
+import { ticketsReducer } from './ticketsSlice'
 
 const reducers = combineReducers({
   tickets: ticketsReducer,
