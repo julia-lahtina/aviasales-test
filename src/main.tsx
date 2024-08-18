@@ -6,6 +6,7 @@ import { store } from './app/store.ts'
 import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { ErrorPage } from './components/errorPage/ErrorPage.tsx'
+import { MainPage } from './components/mainPage/MainPage.tsx'
 
 
 const router = createBrowserRouter([
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: "/main-page",
+    element: <MainPage />
   }
 ])
 
