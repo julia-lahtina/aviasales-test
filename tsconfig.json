@@ -1,5 +1,10 @@
 {
   "files": [],
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "esModuleInterop": true
+  },
   "references": [
     {
       "path": "./tsconfig.app.json"

@@ -1,12 +1,11 @@
 
 import { sortTickets, ticketsSlice } from '../features/ticketsSlice';
-import { Ticket } from '../types/types';
-
 
 
 describe('ticketsSlice', () => {
 
-  const initialState: Ticket[] = [
+  const initialState = {
+   tickets: [
     { 
         id: 1, 
         price: 100,
@@ -43,7 +42,7 @@ describe('ticketsSlice', () => {
         transitionPlace: '',
         transitions: 0
      }
-  ];
+  ]}
 
 
   it('should sort tickets in ascending order', () => {
